@@ -9,14 +9,14 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Blank</title>
+  <title>Quiz 3 Laravel</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="{{ asset('sbadmin2/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="{{ asset('sbadmin2/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
 </head>
 
@@ -29,11 +29,8 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/artikel') }}">
+        <div class="sidebar-brand-text mx-3">QUIZ 3</div>
       </a>
 
       <!-- Divider -->
@@ -94,7 +91,7 @@
         Addons
       </div>
 
-      <!-- Nav Item - Pages Collapse Menu -->
+      <!-- Nav Item - Pages Collapse Menu
       <li class="nav-item active">
         <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-folder"></i>
@@ -112,7 +109,7 @@
             <a class="collapse-item active" href="blank.html">Blank Page</a>
           </div>
         </div>
-      </li>
+      </li> -->
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
@@ -331,8 +328,9 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+          <!-- Page Heading
+          <h1 class="h3 mb-4 text-gray-800">Blank Page</h1> -->
+          @yield('content')
 
         </div>
         <!-- /.container-fluid -->
@@ -381,19 +379,19 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ asset('sbadmin2/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ asset('sbadmin2/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="{{ asset('sbadmin2/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+  <script src="{{ asset('sbadmin2/js/sb-admin-2.min.js')}}"></script>
+
+  <script src="{{ asset('sbadmin2/js/swal.min.js')}}"></script>
 
   <!-- script tambahan sweet alert, bukan dari bawaan sb-admin-2 -->
   @stack('scripts')
-
-  <script src="js/swal.min.js"></script>
 
 </body>
 
